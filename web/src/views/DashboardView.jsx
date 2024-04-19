@@ -1,23 +1,31 @@
 import { useState, useEffect } from 'react'
-import { getProductsService } from "../services"
+import { getProductsService, getSessionTokenService } from "../services"
 import ListProducts from "../components/ListProducts"
 
 const DashboardView = () => {
     const [products, setProducts] = useState([])
 
-    const getProducts = async () => {
-        const token = `${import.meta.env.VITE_API_TOKEN}`
-        const result = await getProductsService(null, token)
-        setProducts(result?.data?.data)
-    }
-
-    // Cargar productos iniciales
     useEffect(() => {
-        getProducts()
+        const getInitialData = async () => {
+            const resultToken = await getSessionTokenService()
+            const { name, phone, img_profile, token} = resultToken?.data?.data
+            const user = {
+                name,
+                phone,
+                img_profile
+            }
+            localStorage.setItem("token", JSON.stringify(token))
+            localStorage.setItem("user", JSON.stringify(user))
+            
+            const resultProducts = await getProductsService(null, token)
+            setProducts(resultProducts?.data?.data)
+        }
+
+        getInitialData()
     }, [])
 
   return (
-    <div>
+    <div className='container'>
         <h1>Lista de productos</h1>
         <hr className="hr mb-5" />
         <ListProducts

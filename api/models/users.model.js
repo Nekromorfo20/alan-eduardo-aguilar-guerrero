@@ -16,6 +16,10 @@ const UsersModel = sequelize.define('users', {
         type: DataTypes.STRING,
         allowNull: false
     },
+    img_profile: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
     created_at: {
         type: DataTypes.STRING,
         allowNull: true

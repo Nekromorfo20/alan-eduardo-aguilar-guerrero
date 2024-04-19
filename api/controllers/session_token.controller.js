@@ -45,6 +45,8 @@ class SessionTokenController {
 
             result = {
                 name: user.name,
+                phone: user.phone,
+                img_profile: user.img_profile,
                 token: token
             }
 

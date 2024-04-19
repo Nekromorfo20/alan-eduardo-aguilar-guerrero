@@ -1,15 +1,13 @@
 import { useNavigate } from "react-router-dom"
 import Swal from 'sweetalert2/dist/sweetalert2.js'
-import 'sweetalert2/src/sweetalert2.scss'
 
 const ListProducts = ({ products }) => {
     const goTo = useNavigate()
 
     const showSwal = (product) => {
         Swal.fire({
-            title: "<h1>Detalle de producto</h1>",
             html: `
-                <table className="table mt-4">
+                <table class="table mt-4 text-start">
                     <tbody>
                         <tr>
                             <th>Nombre:</th>
@@ -18,10 +16,6 @@ const ListProducts = ({ products }) => {
                         <tr>
                             <th>Descripción:</th>
                             <td>${product.description}</td>
-                        </tr>
-                        <tr>
-                            <th>Nombre:</th>
-                            <td>${product.name}</td>
                         </tr>
                         <tr>
                             <th>Altura:</th>
@@ -39,11 +33,11 @@ const ListProducts = ({ products }) => {
                 </table>
             `,
             imageUrl: "/pato.png",
-            imageWidth: 412,
-            imageHeight: 412,
+            imageWidth: 312,
+            imageHeight: 312,
             imageAlt: "Imagen pato",
             showCancelButton: true,
-            confirmButtonText: "Enviar producto",
+            confirmButtonText: "Comprar",
             confirmButtonColor: "#28A745",
             showCancelButton: true,
             cancelButtonColor: "#6E7881",
@@ -62,13 +56,13 @@ const ListProducts = ({ products }) => {
                             className="card"
                             key={product.id}
                         >
-                            <img src="/pato.png" className="card-img-top" alt="Imagen pato" />
-                            <div className="card-body">
+                            <div className="card-body text-center">
                                 <h1 className="card-title">{product.name}</h1>
+                                <img src="/pato.png" className="card-img-top" alt="Imagen pato" />
                                 <p className="card-text">{product.description}</p>
                                 <button
                                     type="button"
-                                    className="btn btn-primary btn-block"
+                                    className="btn btn-primary"
                                     onClick={() => showSwal(product)}
                                 >Ver detalle</button>
                             </div>
@@ -79,30 +73,5 @@ const ListProducts = ({ products }) => {
         </div>
     )
 }
-
-/*
-<table className="table mt-4">
-    <thead>
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Descripción</th>
-            <th scope="col">Altura</th>
-            <th scope="col">Longitud</th>
-            <th scope="col">Anchura</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">${product.id}</th>
-            <td>${product.name}</td>
-            <td>${product.description}</td>
-            <td>${product.height}</td>
-            <td>${product.length}</td>
-            <td>${product.width}</td>
-        </tr>
-    </tbody>
-</table>
-*/
 
 export default ListProducts
