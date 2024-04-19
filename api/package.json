@@ -1,7 +1,7 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "Prueba técnica de Tendency Innovations, creación de CRUD productos",
+  "description": "Prueba técnica de Tendencys Innovations, creación de CRUD productos",
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js",

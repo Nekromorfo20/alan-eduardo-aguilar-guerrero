@@ -1,8 +1,8 @@
 # "Proyecto Cotización de envio de productos"
-*Evaluación ténica de ingreso para Tendency Innovations.*
+*Evaluación ténica de ingreso para Tendencys Innovations.*
 
 ## Descrición:
-Evaluación técnica para Tendency Innovations, proyecto para cotización y envio de productos.
+Evaluación técnica para Tendencys Innovations, proyecto para cotización y envio de productos.
 
 Este es un proyecto API y Web que obtiene una lista de productos de una base de datos y con ellos se puede generar una solicitud de cotización de envio por paqueteria y su registro de envio utilizando la API de Envia.com.
 
