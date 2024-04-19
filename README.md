@@ -81,5 +81,30 @@ Una vez seleccionado de clic en el botón "Start Import", con esto ya se habra g
 
 ![alt text](img_documentation/image8.png)
 
+## Prueba de servicios API para Productos (CRUD /products):
+Se generaron los servicios GET, POST, PUT y DELETE en el proyecto API para la modificación de la tabla "catalog_products", ademas de generar un servicio para la creación de tokens, los tokens generador por el servicio POST /session-token son requeridos para consultar el resto de servios (o endpoints).
+
+*Servico POST /session-token se utiliza para generar tokens de sesión requeridos por los demas endpoints.*
+![alt text](img_documentation/image15.png)
+
+*Los tokens debe colocarse como Header "x-auth-token" antes de llamar a cualquiera de los servicios siguientes*
+![alt text](img_documentation/image20.png)
+
+*Servicio GET /products y /products?id={{id}} se utiliza para listar todos los productos de la tabla "catalog_products" tambien puede utilizarse para obtener un solo resultado, solo se agregar el parámetro id*
+![alt text](img_documentation/image16.png)
+
+*Servicio POST /products se utiliza para crear un nuevo producto en la tabla "catalog_products"*
+![alt text](img_documentation/image17.png)
+
+*Servicio PUT /products se utiliza para actualizar un producto existente por id en la tabla "catalog_products", se propocionan el resto de parámetros por actualizar*
+![alt text](img_documentation/image18.png)
+
+*Servicio DELETE /products se utiliza para eliminar un producto existente por id de la tabla "catalog_products"*
+![alt text](img_documentation/image19.png)
+
 ## Usuario de prueba:
 Usuario: alan
+
+## Datos de API Envia.com
+Correo: alan.ag_97@hotmail.com
+API_token: 2130b9f6890247e1d1ea05ceecaf0f6c147c7f36bd6b62721a4c74341cd3b748
