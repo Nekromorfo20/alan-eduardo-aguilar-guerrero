@@ -10,7 +10,7 @@ const FormGenerateQuote = ({ quote, handleChangeForm, handleSubmitQuote }) => {
         <form
             onSubmit={handleSubmitQuote}
         >
-            <h2>DATOS DE ORIGEN</h2>
+            <h2>DATOS ORIGEN DEL ENVIO</h2>
             <div className="mb-3">
                 <label htmlFor="originName" className="form-label">Nombre usuario:</label>
                 <input id="originName" name="originName" type="text" className="form-control" placeholder="Ingrese nombre del usuario" value={quote.originName} onChange={handleChangeForm} />
@@ -79,7 +79,7 @@ const FormGenerateQuote = ({ quote, handleChangeForm, handleSubmitQuote }) => {
                 <input id="originReference" name="originReference" type="text" className="form-control" placeholder="Ingrese alguna referencia del envio" value={quote.originReference} onChange={handleChangeForm} />
             </div>
 
-            <h2>DATOS DE DESTINO</h2>
+            <h2>DATOS DESTINO DEL ENVIO</h2>
             <div className="mb-3">
                 <label htmlFor="destinyName" className="form-label">Nombre usuario:</label>
                 <input id="destinyName" name="destinyName" type="text" className="form-control" placeholder="Ingrese nombre del usuario" value={quote.destinyName} onChange={handleChangeForm} />
@@ -187,7 +187,7 @@ const FormGenerateQuote = ({ quote, handleChangeForm, handleSubmitQuote }) => {
                 <input id="packageHeight" name="packageHeight" type="number" className="form-control" placeholder="Altura del paquete" value={quote.packageHeight} onChange={handleChangeForm} />
             </div>
 
-            <h2>INFORMACIÓN DE TRANSPORTADOR</h2>
+            <h2>INFORMACIÓN DEL TRANSPORTADOR</h2>
             <div className="mb-3">
                 <label htmlFor="shipmentCarrier" className="form-label">Empresa transportadora:</label>
                 <select

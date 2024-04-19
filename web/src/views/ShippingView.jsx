@@ -245,7 +245,7 @@ const ShippingView = () => {
                         onSubmit={handleSubmitShipment}
                     >
                         <TableQuote
-                            title="Información origen"
+                            title="Resumen de información origen"
                             name={quote.originName}
                             company={quote.originCompany}
                             email={quote.originEmail}
@@ -261,7 +261,7 @@ const ShippingView = () => {
                         />
 
                         <TableQuote
-                            title="Información de destino"
+                            title="Resumen de información destino"
                             name={quote.destinyName}
                             company={quote.destinyCompany}
                             email={quote.destinyEmail}
@@ -277,7 +277,7 @@ const ShippingView = () => {
                         />
 
                         <TableShipment
-                            title="Información de envio"
+                            title="Información de paquete y transportador"
                             carrier={shipment.carrier}
                             service={shipment.service}
                             serviceDescription={shipment.serviceDescription}
@@ -291,7 +291,7 @@ const ShippingView = () => {
                         />
                         
                         <div className="d-flex justify-content-between">
-                            <Link className="btn btn-secondary" to="/">Regresar</Link>
+                            <Link className="btn btn-secondary" to="/">Ir a inicio</Link>
                             <input
                                 className="btn btn-primary"
                                 type="submit"

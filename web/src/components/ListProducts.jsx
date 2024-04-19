@@ -5,6 +5,8 @@ const ListProducts = ({ products }) => {
     const goTo = useNavigate()
 
     const showSwal = (product) => {
+        const image = product.id < 5 ? `/${product.id}.png` : "/4.png"
+
         Swal.fire({
             html: `
                 <table class="table mt-4 text-start">
@@ -32,9 +34,8 @@ const ListProducts = ({ products }) => {
                     </tbody>
                 </table>
             `,
-            imageUrl: "/pato.png",
-            imageWidth: 312,
-            imageHeight: 312,
+            imageUrl: image,
+            imageWidth: 200,
             imageAlt: "Imagen pato",
             showCancelButton: true,
             confirmButtonText: "Comprar",
@@ -51,14 +52,14 @@ const ListProducts = ({ products }) => {
         <div className="row mt-3">
             <div className="col">
                 <div className="card-group">
-                    {products.map((product) => (
+                    {products.map((product) => (                        
                         <div
                             className="card"
                             key={product.id}
                         >
                             <div className="card-body text-center">
                                 <h1 className="card-title">{product.name}</h1>
-                                <img src="/pato.png" className="card-img-top" alt="Imagen pato" />
+                                <img src={product.id < 5 ? `/${product.id}.png` : `/1.png`}  style={{ width: 150 }} alt="Imagen pato" />
                                 <p className="card-text">{product.description}</p>
                                 <button
                                     type="button"
